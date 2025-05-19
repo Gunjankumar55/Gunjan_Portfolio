@@ -212,7 +212,7 @@
 }
 
 .project-img {
-  height: 200px;
+  height: 250px;
   background-size: cover;
   background-position: center;
 }
@@ -643,11 +643,11 @@
 			</div>
 			<div class="row">
 				<!-- New WSD Project -->
-				<div class="col-md-4 mb-4">
+				<div class="col-md-6 mb-4">
 					<div class="project-card ftco-animate">
 						<div class="project-img" style="background-image: url('images/NLP.png');"></div>
 						<div class="project-content">
-							<h3 class="project-title">Word Sense Disambiguation Tool</h3>
+							<h3 class="project-title">SenseResolver - Modern WSD with BERT & Lesk</h3>
 							<p class="project-desc">A modern web application that uses Enhanced Lesk Algorithm with BERT semantic similarity to disambiguate ambiguous words in text.</p>
 							<div class="tech-stack">
 								<span class="badge badge-light">Python</span>
@@ -656,15 +656,16 @@
 								<span class="badge badge-light">BERT</span>
 							</div>
 							<div class="project-links">
-								<a href="#" class="btn-demo" target="_blank">Live Demo</a>
+								<a href="https://gkc55-nlp-wsd.hf.space/" class="btn-demo" target="_blank">Try it</a>
 								<a href="https://github.com/Gunjankumar55/LESK_BERT_WSD" class="btn-github" target="_blank">GitHub</a>
+								<a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID" class="btn-demo" target="_blank" onclick="openYouTubePreview(event, 'https://www.youtube.com/watch?v=YOUR_VIDEO_ID')">Demo</a>
 							</div>
 						</div>
 					</div>
 				</div>
 				
 				<!-- AgrowAssist Project -->
-				<div class="col-md-4 mb-4">
+				<div class="col-md-6 mb-4">
 					<div class="project-card ftco-animate">
 						<div class="project-img" style="background-image: url('images/proj_1.png');"></div>
 						<div class="project-content">
@@ -677,15 +678,16 @@
 								<span class="badge badge-light">Data Analysis</span>
 							</div>
 							<div class="project-links">
-								<a href="https://gkc55-agrocrop.hf.space/" class="btn-demo" target="_blank">Live Demo</a>
+								<a href="https://gkc55-agrocrop.hf.space/" class="btn-demo" target="_blank">Try it</a>
 								<a href="https://github.com/Gunjankumar55/Agroassist---Smart-Crop-Recommendation-using-ML" class="btn-github" target="_blank">GitHub</a>
+								<a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID" class="btn-demo" target="_blank" onclick="openYouTubePreview(event, 'https://www.youtube.com/watch?v=YOUR_VIDEO_ID')">Demo</a>
 							</div>
 						</div>
 					</div>
 				</div>
 				
 				<!-- AskDB Project -->
-				<div class="col-md-4 mb-4">
+				<div class="col-md-6 mb-4">
 					<div class="project-card ftco-animate">
 						<div class="project-img" style="background-image: url('images/proj_2.png');"></div>
 						<div class="project-content">
@@ -698,15 +700,15 @@
 								<span class="badge badge-light">LLMs</span>
 							</div>
 							<div class="project-links">
-								<a href="#" class="btn-demo" target="_blank">Live Demo</a>
 								<a href="https://github.com/Gunjankumar55/askDB---Smart-text-to-sql-" class="btn-github" target="_blank">GitHub</a>
+								<a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID" class="btn-demo" target="_blank" onclick="openYouTubePreview(event, 'https://www.youtube.com/watch?v=YOUR_VIDEO_ID')">Demo</a>
 							</div>
 						</div>
 					</div>
 				</div>
 				
 				<!-- AgrowAssist Android Project -->
-				<div class="col-md-4 mb-4">
+				<div class="col-md-6 mb-4">
 					<div class="project-card ftco-animate">
 						<div class="project-img" style="background-image: url('images/app.png');"></div>
 						<div class="project-content">
@@ -719,7 +721,7 @@
 								<span class="badge badge-light">ML</span>
 							</div>
 							<div class="project-links">
-								<a href="#" class="btn-demo" target="_blank">Live Demo</a>
+								<a href="#" class="btn-demo" target="_blank">Demo</a>
 								<a href="https://github.com/Gunjankumar55/askDB---Smart-text-to-sql-" class="btn-github" target="_blank">GitHub</a>
 							</div>
 						</div>
@@ -1045,3 +1047,39 @@
     
   </body>
 </html>
+
+<!-- Add this before the closing body tag -->
+<div id="youtubeModal" class="certificate-modal">
+    <div class="certificate-modal-content">
+        <span class="close-modal">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <div class="video-container">
+            <iframe id="youtubeFrame" width="100%" height="500" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openYouTubePreview(event, videoUrl) {
+        event.preventDefault();
+        const modal = document.getElementById('youtubeModal');
+        const iframe = document.getElementById('youtubeFrame');
+        const videoId = videoUrl.split('v=')[1];
+        
+        modal.style.display = "flex";
+        iframe.src = `https://www.youtube.com/embed/${videoId}`;
+        
+        const closeBtn = document.querySelector("#youtubeModal .close-modal");
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+            iframe.src = "";
+        }
+        
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                iframe.src = "";
+            }
+        }
+    }
+</script>
