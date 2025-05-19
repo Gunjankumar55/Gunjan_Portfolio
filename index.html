@@ -134,11 +134,16 @@
 }
 
 .certificate-img {
-  height: 160px !important;
+  height: 200px !important;
   background-position: center !important;
   background-size: cover !important;
-  border-radius: 8px;
+  border-radius: 12px 12px 0 0;
   cursor: pointer;
+}
+
+.certificate-item .p-3 {
+  border-radius: 0 0 12px 12px;
+  background: rgba(255, 255, 255, 0.05);
 }
 
 /* Certificate Modal */
@@ -721,8 +726,8 @@
 								<span class="badge badge-light">ML</span>
 							</div>
 							<div class="project-links">
-								<a href="#" class="btn-demo" target="_blank">Demo</a>
 								<a href="https://github.com/Gunjankumar55/askDB---Smart-text-to-sql-" class="btn-github" target="_blank">GitHub</a>
+								<a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID" class="btn-demo" target="_blank" onclick="openYouTubePreview(event, 'https://www.youtube.com/watch?v=YOUR_VIDEO_ID')">Demo</a>
 							</div>
 						</div>
 					</div>
